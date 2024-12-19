@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-Star Books - Books to Scrape</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">Five Star Books</h1>
+        
+        <!-- Refresh button -->
+        <div class="text-center mb-8">
+            <a href="/" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Refresh Books
+            </a>
+        </div>
+
+        <!-- Books grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {% for book in books %}
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="p-4">
+                    <div class="aspect-w-3 aspect-h-4 mb-4">
+                        <img src="{{ book.image_url }}" alt="{{ book.title }}" 
+                             class="object-cover w-full h-64 rounded">
+                    </div>
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">{{ book.title }}</h2>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            {% for _ in range(5) %}
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                            </svg>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <p class="text-green-600 font-bold text-xl mb-2">{{ book.price }}</p>
+                    <p class="text-gray-600">{{ book.availability }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        {% if not books %}
+        <div class="text-center text-gray-600 mt-8">
+            <p>No five-star books found. Try refreshing the page.</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html> 

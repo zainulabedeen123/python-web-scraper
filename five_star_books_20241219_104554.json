@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Sapiens: A Brief History of Humankind",
+    "price": "Â£54.23",
+    "availability": "In stock",
+    "image_url": "https://books.toscrape.com/media/cache/be/a5/bea5697f2534a2f86a3ef27b5a8c12a6.jpg",
+    "rating": "5 stars"
+  },
+  {
+    "title": "Set Me Free",
+    "price": "Â£17.46",
+    "availability": "In stock",
+    "image_url": "https://books.toscrape.com/media/cache/5b/88/5b88c52633f53cacf162c15f4f823153.jpg",
+    "rating": "5 stars"
+  },
+  {
+    "title": "Scott Pilgrim's Precious Little Life (Scott Pilgrim #1)",
+    "price": "Â£52.29",
+    "availability": "In stock",
+    "image_url": "https://books.toscrape.com/media/cache/94/b1/94b1b8b244bce9677c2f29ccc890d4d2.jpg",
+    "rating": "5 stars"
+  },
+  {
+    "title": "Rip it Up and Start Again",
+    "price": "Â£35.02",
+    "availability": "In stock",
+    "image_url": "https://books.toscrape.com/media/cache/81/c4/81c4a973364e17d01f217e1188253d5e.jpg",
+    "rating": "5 stars"
+  }
+]
